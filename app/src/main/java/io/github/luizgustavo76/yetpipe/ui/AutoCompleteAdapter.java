@@ -1,4 +1,4 @@
-package io.github.gohoski.notpipe.ui;
+package io.github.luizgustavo76.yetpipe.ui;
 
 import android.content.Context;
 import android.os.Handler;
@@ -15,8 +15,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import io.github.gohoski.notpipe.api.Manager;
-import io.github.gohoski.notpipe.api.Metadata;
+import io.github.luizgustavo76.yetpipe.api.Manager;
+import io.github.luizgustavo76.yetpipe.api.Metadata;
 
 public class AutoCompleteAdapter extends BaseAdapter implements Filterable {
     private Context context;

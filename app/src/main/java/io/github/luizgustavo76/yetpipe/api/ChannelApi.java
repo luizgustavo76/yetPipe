@@ -1,9 +1,9 @@
-package io.github.gohoski.notpipe.api;
+package io.github.luizgustavo76.yetpipe.api;
 
 import java.io.IOException;
 import java.util.List;
 
-import io.github.gohoski.notpipe.data.VideoInfo;
+import io.github.luizgustavo76.yetpipe.data.VideoInfo;
 
 /**
  * Created by Gleb on 14.06.2026.

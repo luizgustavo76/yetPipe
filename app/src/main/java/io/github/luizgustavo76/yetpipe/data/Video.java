@@ -1,9 +1,9 @@
-package io.github.gohoski.notpipe.data;
+package io.github.luizgustavo76.yetpipe.data;
 
 import java.util.Date;
 import java.util.List;
 
-import io.github.gohoski.notpipe.Utils;
+import io.github.luizgustavo76.yetpipe.Utils;
 
 /**
  * Created by Gleb on 12.01.2026.

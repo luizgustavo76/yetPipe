@@ -1,4 +1,4 @@
-package io.github.gohoski.notpipe.api;
+package io.github.luizgustavo76.yetpipe.api;
 
 import java.io.IOException;
 

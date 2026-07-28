@@ -1,4 +1,4 @@
-package io.github.gohoski.notpipe.util;
+package io.github.luizgustavo76.yetpipe.util;
 
 import android.os.Handler;
 import android.os.Looper;
@@ -7,8 +7,8 @@ import java.util.Hashtable;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-import io.github.gohoski.notpipe.api.Manager;
-import io.github.gohoski.notpipe.api.Metadata;
+import io.github.luizgustavo76.yetpipe.api.Manager;
+import io.github.luizgustavo76.yetpipe.api.Metadata;
 
 /**
  * Created by Gleb on 05.06.2026.

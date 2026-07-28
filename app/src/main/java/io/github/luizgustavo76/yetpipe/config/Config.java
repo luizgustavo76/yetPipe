@@ -1,4 +1,4 @@
-package io.github.gohoski.notpipe.config;
+package io.github.luizgustavo76.yetpipe.config;
 
 import java.util.ArrayList;
 import java.util.List;

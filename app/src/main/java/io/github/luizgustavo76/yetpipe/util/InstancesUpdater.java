@@ -1,4 +1,4 @@
-package io.github.gohoski.notpipe.util;
+package io.github.luizgustavo76.yetpipe.util;
 
 import android.content.Context;
 import android.os.AsyncTask;
@@ -10,13 +10,13 @@ import java.util.List;
 import cc.nnproject.json.JSON;
 import cc.nnproject.json.JSONArray;
 import cc.nnproject.json.JSONObject;
-import io.github.gohoski.notpipe.api.Manager;
-import io.github.gohoski.notpipe.api.Metadata;
-import io.github.gohoski.notpipe.config.Config;
-import io.github.gohoski.notpipe.config.ConfigManager;
-import io.github.gohoski.notpipe.http.HttpClient;
-import io.github.gohoski.notpipe.http.HttpRequest;
-import io.github.gohoski.notpipe.ui.Loading;
+import io.github.luizgustavo76.yetpipe.api.Manager;
+import io.github.luizgustavo76.yetpipe.api.Metadata;
+import io.github.luizgustavo76.yetpipe.config.Config;
+import io.github.luizgustavo76.yetpipe.config.ConfigManager;
+import io.github.luizgustavo76.yetpipe.http.HttpClient;
+import io.github.luizgustavo76.yetpipe.http.HttpRequest;
+import io.github.luizgustavo76.yetpipe.ui.Loading;
 
 /**
  * Created by Qwen on 2026.
@@ -55,7 +55,7 @@ public class InstancesUpdater {
 
         @Override
         protected void onPreExecute() {
-            load = new Loading(context, io.github.gohoski.notpipe.R.string.updating_instances);
+            load = new Loading(context, io.github.luizgustavo76.yetpipe.R.string.updating_instances);
         }
 
         @Override

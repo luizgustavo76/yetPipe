@@ -1,4 +1,4 @@
-package io.github.gohoski.notpipe.http;
+package io.github.luizgustavo76.yetpipe.http;
 
 /**
  * Created by Gleb on 21.08.2025.

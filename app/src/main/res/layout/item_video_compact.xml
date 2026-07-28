@@ -9,7 +9,7 @@
     <FrameLayout
         android:layout_width="130dp"
         android:layout_height="wrap_content">
-        <io.github.gohoski.notpipe.ui.AspectRatioImageView
+        <io.github.luizgustavo76.yetpipe.ui.AspectRatioImageView
             android:id="@+id/video_thumbnail"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -36,7 +36,7 @@
         android:orientation="vertical"
         android:gravity="center_vertical"
         android:paddingLeft="10dp">
-            <io.github.gohoski.notpipe.ui.EllipsizingTextView
+            <io.github.luizgustavo76.yetPipe.ui.EllipsizingTextView
                 android:id="@+id/video_title"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"

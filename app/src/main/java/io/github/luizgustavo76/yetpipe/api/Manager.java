@@ -1,4 +1,4 @@
-package io.github.gohoski.notpipe.api;
+package io.github.luizgustavo76.yetpipe.api;
 
 import android.content.Context;
 import android.os.Handler;
@@ -18,12 +18,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import io.github.gohoski.notpipe.NotPipe;
-import io.github.gohoski.notpipe.R;
-import io.github.gohoski.notpipe.config.Config;
-import io.github.gohoski.notpipe.config.ConfigManager;
-import io.github.gohoski.notpipe.http.HttpClient;
-import io.github.gohoski.notpipe.http.VideoTooLongException;
+import io.github.luizgustavo76.yetpipe.YetPipe;
+import io.github.luizgustavo76.yetpipe.R;
+import io.github.luizgustavo76.yetpipe.config.Config;
+import io.github.luizgustavo76.yetpipe.config.ConfigManager;
+import io.github.luizgustavo76.yetpipe.http.HttpClient;
+import io.github.luizgustavo76.yetpipe.http.VideoTooLongException;
 
 /**
  * Manager class for handling multiple API instances with fallback capability.
@@ -364,7 +364,7 @@ public class Manager {
             @Override
             public void run() {
                 try {
-                    Context context = NotPipe.getAppContext();
+                    Context context = YetPipe.getAppContext();
                     if (context != null) {
                         Toast.makeText(context,
                                 context.getString(R.string.dead_instance, name),
@@ -382,7 +382,7 @@ public class Manager {
             @Override
             public void run() {
                 try {
-                    Toast.makeText(NotPipe.getAppContext(),
+                    Toast.makeText(YetPipe.getAppContext(),
                             "check your internet connection",
                             Toast.LENGTH_SHORT).show();
                 } catch (Exception ignored) {}
@@ -393,7 +393,7 @@ public class Manager {
     private boolean isDeadInstanceError(Throwable t) {
         if (t == null) return false;
 
-        if (!io.github.gohoski.notpipe.Utils.hasConnection(NotPipe.getAppContext())) {
+        if (!io.github.luizgustavo76.yetpipe.Utils.hasConnection(YetPipe.getAppContext())) {
             return false;
         }
 

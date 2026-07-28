@@ -1,4 +1,4 @@
-package io.github.gohoski.notpipe.util;
+package io.github.luizgustavo76.yetpipe.util;
 
 import android.content.Context;
 import android.content.SharedPreferences;

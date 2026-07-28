@@ -1,10 +1,10 @@
-package io.github.gohoski.notpipe.ui;
+package io.github.luizgustavo76.yetpipe.ui;
 
 import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.VideoView;
 
-import io.github.gohoski.notpipe.NotPipe;
+import io.github.luizgustavo76.yetpipe.YetPipe;
 
 /**
  * Created by Gleb on 18.01.2026.
@@ -67,7 +67,7 @@ public class AspectRatioVideoView extends VideoView {
             setMeasuredDimension(width, height);
         }
 
-        if (NotPipe.SDK < 8) {
+        if (YetPipe.SDK < 8) {
             postInvalidate();
         }
     }
@@ -75,7 +75,7 @@ public class AspectRatioVideoView extends VideoView {
     public void forceLayoutUpdate() {
         requestLayout();
         invalidate();
-        if (NotPipe.SDK < 8) {
+        if (YetPipe.SDK < 8) {
             post(new Runnable() {
                 @Override
                 public void run() {

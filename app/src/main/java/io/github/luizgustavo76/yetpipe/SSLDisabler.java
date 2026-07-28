@@ -1,4 +1,4 @@
-package io.github.gohoski.notpipe;
+package io.github.luizgustavo76.yetpipe;
 
 import java.security.SecureRandom;
 import java.security.cert.X509Certificate;

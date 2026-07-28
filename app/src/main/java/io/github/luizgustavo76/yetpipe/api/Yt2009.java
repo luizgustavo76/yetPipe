@@ -1,4 +1,4 @@
-package io.github.gohoski.notpipe.api;
+package io.github.luizgustavo76.yetpipe.api;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -7,10 +7,10 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import io.github.gohoski.notpipe.Utils;
-import io.github.gohoski.notpipe.data.VideoInfo;
-import io.github.gohoski.notpipe.http.HttpClient;
-import io.github.gohoski.notpipe.http.HttpRequest;
+import io.github.luizgustavo76.yetpipe.Utils;
+import io.github.luizgustavo76.yetpipe.data.VideoInfo;
+import io.github.luizgustavo76.yetpipe.http.HttpClient;
+import io.github.luizgustavo76.yetpipe.http.HttpRequest;
 
 /**
  * Implementation of yt2009's video endpoints

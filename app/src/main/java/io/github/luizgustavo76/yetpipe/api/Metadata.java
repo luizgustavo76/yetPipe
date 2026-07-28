@@ -1,12 +1,12 @@
-package io.github.gohoski.notpipe.api;
+package io.github.luizgustavo76.yetpipe.api;
 
 import java.io.IOException;
 import java.util.List;
 
-import io.github.gohoski.notpipe.data.Channel;
-import io.github.gohoski.notpipe.data.Comment;
-import io.github.gohoski.notpipe.data.Video;
-import io.github.gohoski.notpipe.data.VideoInfo;
+import io.github.luizgustavo76.yetpipe.data.Channel;
+import io.github.luizgustavo76.yetpipe.data.Comment;
+import io.github.luizgustavo76.yetpipe.data.Video;
+import io.github.luizgustavo76.yetpipe.data.VideoInfo;
 
 /**
  * Created by Gleb on 09.01.2026.

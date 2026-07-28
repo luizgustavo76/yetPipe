@@ -1,4 +1,4 @@
-package io.github.gohoski.notpipe.data;
+package io.github.luizgustavo76.yetpipe.data;
 
 import java.util.List;
 

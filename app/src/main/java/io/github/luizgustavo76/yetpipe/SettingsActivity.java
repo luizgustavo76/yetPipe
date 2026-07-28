@@ -1,4 +1,4 @@
-package io.github.gohoski.notpipe;
+package io.github.luizgustavo76.yetpipe;
 
 import android.app.Activity;
 import android.content.Context;
@@ -13,11 +13,11 @@ import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import io.github.gohoski.notpipe.api.Manager;
-import io.github.gohoski.notpipe.config.Config;
-import io.github.gohoski.notpipe.config.ConfigManager;
-import io.github.gohoski.notpipe.ui.InstanceSection;
-import io.github.gohoski.notpipe.util.InstancesUpdater;
+import io.github.luizgustavo76.yetpipe.api.Manager;
+import io.github.luizgustavo76.yetpipe.config.Config;
+import io.github.luizgustavo76.yetpipe.config.ConfigManager;
+import io.github.luizgustavo76.yetpipe.ui.InstanceSection;
+import io.github.luizgustavo76.yetpipe.util.InstancesUpdater;
 
 /**
  * Settings activity for managing API instances and app settings.
@@ -88,7 +88,7 @@ public class SettingsActivity extends Activity implements InstancesUpdater.OnIns
                     convertLayout.setVisibility(View.GONE);
                     qualitySpinner.setEnabled(true);
                     streamPlaybackChk.setEnabled(true);
-                    if (NotPipe.SDK < 11) {
+                    if (YetPipe.SDK < 11) {
                         playerSpinner.setSelection(1);
                         streamPlaybackChk.setChecked(true);
                     }

@@ -1,4 +1,4 @@
-package io.github.gohoski.notpipe;
+package io.github.luizgustavo76.yetpipe;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -28,14 +28,14 @@ import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.List;
 
-import io.github.gohoski.notpipe.api.ChannelApi;
-import io.github.gohoski.notpipe.api.Manager;
-import io.github.gohoski.notpipe.api.Metadata;
-import io.github.gohoski.notpipe.api.ContentUnavailableException;
-import io.github.gohoski.notpipe.data.Channel;
-import io.github.gohoski.notpipe.data.VideoInfo;
-import io.github.gohoski.notpipe.ui.VideoAdapter;
-import io.github.gohoski.notpipe.util.ImageLoader;
+import io.github.luizgustavo76.yetpipe.api.ChannelApi;
+import io.github.luizgustavo76.yetpipe.api.Manager;
+import io.github.luizgustavo76.yetpipe.api.Metadata;
+import io.github.luizgustavo76.yetpipe.api.ContentUnavailableException;
+import io.github.luizgustavo76.yetpipe.data.Channel;
+import io.github.luizgustavo76.yetpipe.data.VideoInfo;
+import io.github.luizgustavo76.yetpipe.ui.VideoAdapter;
+import io.github.luizgustavo76.yetpipe.util.ImageLoader;
 
 /**
  * Created by Gleb on 12.03.2026.
@@ -131,7 +131,7 @@ public class ChannelActivity extends Activity {
         tabHost.addTab(tabHost.newTabSpec("videos").setIndicator(getString(R.string.videos)).setContent(R.id.videos));
 
         sortingSpinner = (Spinner) findViewById(R.id.sorting_spinner);
-        if (NotPipe.SDK < 11 && sortingSpinner != null) {
+        if (YetPipe.SDK < 11 && sortingSpinner != null) {
             sortingSpinner.setVisibility(View.GONE);
         } else {
             ArrayAdapter<String> spinnerAdapter = new ArrayAdapter<String>(context,
@@ -184,7 +184,7 @@ public class ChannelActivity extends Activity {
             }
         }
 
-        if (NotPipe.SDK < 11) {
+        if (YetPipe.SDK < 11) {
             int height = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 33f, getResources().getDisplayMetrics());
             TabWidget widget = tabHost.getTabWidget();
             for (int i = 0; i < widget.getChildCount(); i++) {
@@ -245,7 +245,7 @@ public class ChannelActivity extends Activity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        if (NotPipe.SDK < 11) {
+        if (YetPipe.SDK < 11) {
             getMenuInflater().inflate(R.menu.menu_channel, menu);
             return true;
         }
@@ -254,7 +254,7 @@ public class ChannelActivity extends Activity {
 
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
-        if (NotPipe.SDK < 11) {
+        if (YetPipe.SDK < 11) {
             MenuItem latestItem = menu.findItem(R.id.action_sort_latest);
             MenuItem popularItem = menu.findItem(R.id.action_sort_popular);
             if (latestItem != null) {
@@ -269,7 +269,7 @@ public class ChannelActivity extends Activity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (NotPipe.SDK < 11) {
+        if (YetPipe.SDK < 11) {
             if (item.getItemId() == R.id.action_sort_latest) {
                 if (currentSort != 0) {
                     currentSort = 0;

@@ -1,4 +1,4 @@
-package io.github.gohoski.notpipe;
+package io.github.luizgustavo76.yetpipe;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -46,23 +46,23 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Random;
 
-import io.github.gohoski.notpipe.api.Conversion;
-import io.github.gohoski.notpipe.api.Manager;
-import io.github.gohoski.notpipe.api.Metadata;
-import io.github.gohoski.notpipe.api.VideoStream;
-import io.github.gohoski.notpipe.config.Config;
-import io.github.gohoski.notpipe.config.ConfigManager;
-import io.github.gohoski.notpipe.data.Comment;
-import io.github.gohoski.notpipe.data.Video;
-import io.github.gohoski.notpipe.data.VideoInfo;
-import io.github.gohoski.notpipe.api.ContentUnavailableException;
-import io.github.gohoski.notpipe.http.HttpClient;
-import io.github.gohoski.notpipe.ui.AdapterLinearLayout;
-import io.github.gohoski.notpipe.ui.AspectRatioVideoView;
-import io.github.gohoski.notpipe.ui.CommentAdapter;
-import io.github.gohoski.notpipe.ui.VideoAdapter;
-import io.github.gohoski.notpipe.util.ChannelIconResolver;
-import io.github.gohoski.notpipe.util.ImageLoader;
+import io.github.luizgustavo76.yetpipe.api.Conversion;
+import io.github.luizgustavo76.yetpipe.api.Manager;
+import io.github.luizgustavo76.yetpipe.api.Metadata;
+import io.github.luizgustavo76.yetpipe.api.VideoStream;
+import io.github.luizgustavo76.yetpipe.config.Config;
+import io.github.luizgustavo76.yetpipe.config.ConfigManager;
+import io.github.luizgustavo76.yetpipe.data.Comment;
+import io.github.luizgustavo76.yetpipe.data.Video;
+import io.github.luizgustavo76.yetpipe.data.VideoInfo;
+import io.github.luizgustavo76.yetpipe.api.ContentUnavailableException;
+import io.github.luizgustavo76.yetpipe.http.HttpClient;
+import io.github.luizgustavo76.yetpipe.ui.AdapterLinearLayout;
+import io.github.luizgustavo76.yetpipe.ui.AspectRatioVideoView;
+import io.github.luizgustavo76.yetpipe.ui.CommentAdapter;
+import io.github.luizgustavo76.yetpipe.ui.VideoAdapter;
+import io.github.luizgustavo76.yetpipe.util.ChannelIconResolver;
+import io.github.luizgustavo76.yetpipe.util.ImageLoader;
 
 public class VideoActivity extends Activity {
     String videoId;
@@ -88,7 +88,7 @@ public class VideoActivity extends Activity {
 
     boolean relatedLoaded = false;
     boolean commentsLoaded = false;
-    protected boolean isOpencore = NotPipe.SDK < 8; // OpenCORE—multimedia framework used on Android <2.2—has some bugs that need to be catched, hence this boolean
+    protected boolean isOpencore = YetPipe.SDK < 8; // OpenCORE—multimedia framework used on Android <2.2—has some bugs that need to be catched, hence this boolean
 
     private LoadVideoTask loadVideoTask;
     private ResolveStreamTask resolveStreamTask;
@@ -496,7 +496,7 @@ public class VideoActivity extends Activity {
     }
 
     private boolean hasSoftwareKeys() {
-        if (NotPipe.SDK < 14) return false;
+        if (YetPipe.SDK < 14) return false;
         try {
             // If the device has physical Menu and Back buttons, it does not use an on-screen nav bar.
             // This prevents the black bar glitch on devices like Samsung tablets.
@@ -512,16 +512,16 @@ public class VideoActivity extends Activity {
     private void hideSystemUI() {
         try {
             View decorView = getWindow().getDecorView();
-            if (NotPipe.SDK >= 14) {
+            if (YetPipe.SDK >= 14) {
                 int flags = 1 | 4; // SYSTEM_UI_FLAG_LOW_PROFILE | SYSTEM_UI_FLAG_FULLSCREEN
                 if (hasSoftwareKeys()) {
                     flags |= 2; // SYSTEM_UI_FLAG_HIDE_NAVIGATION
                 }
-                if (NotPipe.SDK >= 19) {
+                if (YetPipe.SDK >= 19) {
                     flags |= 4096; // SYSTEM_UI_FLAG_IMMERSIVE_STICKY (Better than standard IMMERSIVE)
                 }
                 decorView.getClass().getMethod("setSystemUiVisibility", int.class).invoke(decorView, flags);
-            } else if (NotPipe.SDK >= 11) {
+            } else if (YetPipe.SDK >= 11) {
                 decorView.getClass().getMethod("setSystemUiVisibility", int.class).invoke(decorView, 1);
             }
         } catch (Exception ignored) {}
@@ -530,7 +530,7 @@ public class VideoActivity extends Activity {
     private void showSystemUI() {
         try {
             View decorView = getWindow().getDecorView();
-            if (NotPipe.SDK >= 11) {
+            if (YetPipe.SDK >= 11) {
                 decorView.getClass().getMethod("setSystemUiVisibility", int.class).invoke(decorView, 0);
             }
         } catch (Exception ignored) {}
@@ -1070,7 +1070,7 @@ public class VideoActivity extends Activity {
     }
 
     private void toggleActionBar(boolean show) {
-        if (NotPipe.SDK >= 11) {
+        if (YetPipe.SDK >= 11) {
             try {
                 Object actionBar = Activity.class.getMethod("getActionBar").invoke(this);
                 if (actionBar != null) {
@@ -1115,7 +1115,7 @@ public class VideoActivity extends Activity {
 
         // Fix for the Action Bar Gap & SurfaceView bug.
         // Wait ~300ms for the Action Bar hide animation to finish, then force the layout to snap to the new bounds.
-        if (NotPipe.SDK >= 11) {
+        if (YetPipe.SDK >= 11) {
             videoView.postDelayed(new Runnable() {
                 @Override
                 public void run() {
@@ -1301,7 +1301,7 @@ public class VideoActivity extends Activity {
                             textView.setText(info.host);
                             textView.setPadding(padding * 2, padding, padding, padding);
                             textView.setTextSize(16);
-                            if (NotPipe.SDK < 11) textView.setTextColor(Color.BLACK);
+                            if (YetPipe.SDK < 11) textView.setTextColor(Color.BLACK);
                         }
                         return textView;
                     }
@@ -1419,7 +1419,7 @@ public class VideoActivity extends Activity {
         // Android Holo has a bug where the first tab gets randomly removed in landscape orientation. It gets back again when the user enters and
         // exits full screen mode, and it isn't present in normal non-tablet UI, so we use a dummy tab as a tablet workaround
         boolean hasDummy = false;
-        if (isTablet() && NotPipe.SDK >= 11) {
+        if (isTablet() && YetPipe.SDK >= 11) {
             tabHost.addTab(tabHost.newTabSpec("dummy").setIndicator("").setContent(new TabHost.TabContentFactory() {
                 public View createTabContent(String tag) {
                     return new View(VideoActivity.this);
@@ -1432,9 +1432,9 @@ public class VideoActivity extends Activity {
 
         TabWidget widget = tabHost.getTabWidget();
         if (widget != null) {
-            if (isTablet() && NotPipe.SDK >= 11) {
+            if (isTablet() && YetPipe.SDK >= 11) {
                 hideDummyTab();
-            } else if (NotPipe.SDK < 11) {
+            } else if (YetPipe.SDK < 11) {
                 int height = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 33f, getResources().getDisplayMetrics());
                 for (int i = 0; i < widget.getChildCount(); i++) {
                     View child = widget.getChildAt(i);
@@ -1617,7 +1617,7 @@ public class VideoActivity extends Activity {
             try {
                 android.view.Surface surface = videoView.getHolder().getSurface();
                 if (surface != null) {
-                    if (NotPipe.SDK >= 9) {
+                    if (YetPipe.SDK >= 9) {
                         surfaceReady = (Boolean) surface.getClass().getMethod("isValid").invoke(surface);
                     } else {
                         surfaceReady = true; // For archaic devices, assuming non-null surface is ready

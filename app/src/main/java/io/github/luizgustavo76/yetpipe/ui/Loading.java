@@ -1,9 +1,9 @@
-package io.github.gohoski.notpipe.ui;
+package io.github.luizgustavo76.yetpipe.ui;
 
 import android.app.ProgressDialog;
 import android.content.Context;
 
-import io.github.gohoski.notpipe.R;
+import io.github.luizgustavo76.yetpipe.R;
 
 /**
  * Created by Gleb on 24.10.2025.

@@ -1,4 +1,4 @@
-package io.github.gohoski.notpipe.ui;
+package io.github.luizgustavo76.yetpipe.ui;
 
 /**
  * Created by Gleb on 18.01.2026.

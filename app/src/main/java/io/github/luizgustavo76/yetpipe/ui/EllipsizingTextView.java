@@ -1,4 +1,4 @@
-package io.github.gohoski.notpipe.ui;
+package io.github.luizgustavo76.yetpipe.ui;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -7,7 +7,7 @@ import android.text.StaticLayout;
 import android.util.AttributeSet;
 import android.widget.TextView;
 
-import io.github.gohoski.notpipe.NotPipe;
+import io.github.luizgustavo76.yetpipe.YetPipe;
 
 /**
  * Created by Gleb on 11.06.2026.
@@ -22,7 +22,7 @@ public class EllipsizingTextView extends TextView {
     private boolean programmaticChange = false;
     private String fullText = "";
     private int maxLines = -1;
-    private static final boolean IS_HONEYCOMB_OR_NEWER = NotPipe.SDK >= 11;
+    private static final boolean IS_HONEYCOMB_OR_NEWER = YetPipe.SDK >= 11;
 
     public EllipsizingTextView(Context context) {
         super(context);

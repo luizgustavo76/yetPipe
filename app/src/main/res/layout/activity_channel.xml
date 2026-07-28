@@ -64,7 +64,7 @@
         android:layout_marginTop="16dp"
         tools:visibility="gone"/>
 
-    <io.github.gohoski.notpipe.ui.FixedTabHost
+    <io.github.luizgustavo76.yetpipe.ui.FixedTabHost
         android:id="@android:id/tabhost"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
@@ -145,5 +145,5 @@
                 </LinearLayout>
             </FrameLayout>
         </LinearLayout>
-    </io.github.gohoski.notpipe.ui.FixedTabHost>
+    </io.github.luizgustavo76.yetpipe.ui.FixedTabHost>
 </LinearLayout>

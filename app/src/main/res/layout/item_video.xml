@@ -9,7 +9,7 @@
     <FrameLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
-        <io.github.gohoski.notpipe.ui.AspectRatioImageView
+        <io.github.luizgustavo76.yetpipe.ui.AspectRatioImageView
             android:id="@+id/video_thumbnail"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"

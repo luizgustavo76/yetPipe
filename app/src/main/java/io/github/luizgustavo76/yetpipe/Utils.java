@@ -1,4 +1,4 @@
-package io.github.gohoski.notpipe;
+package io.github.luizgustavo76.yetpipe;
 
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;

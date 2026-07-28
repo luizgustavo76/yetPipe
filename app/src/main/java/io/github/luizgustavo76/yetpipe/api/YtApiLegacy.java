@@ -1,4 +1,4 @@
-package io.github.gohoski.notpipe.api;
+package io.github.luizgustavo76.yetpipe.api;
 
 import java.io.IOException;
 import java.net.URLDecoder;
@@ -13,13 +13,13 @@ import cc.nnproject.json.JSON;
 import cc.nnproject.json.JSONArray;
 import cc.nnproject.json.JSONException;
 import cc.nnproject.json.JSONObject;
-import io.github.gohoski.notpipe.Utils;
-import io.github.gohoski.notpipe.data.Channel;
-import io.github.gohoski.notpipe.data.Comment;
-import io.github.gohoski.notpipe.data.Video;
-import io.github.gohoski.notpipe.data.VideoInfo;
-import io.github.gohoski.notpipe.http.HttpClient;
-import io.github.gohoski.notpipe.http.HttpRequest;
+import io.github.luizgustavo76.yetpipe.Utils;
+import io.github.luizgustavo76.yetpipe.data.Channel;
+import io.github.luizgustavo76.yetpipe.data.Comment;
+import io.github.luizgustavo76.yetpipe.data.Video;
+import io.github.luizgustavo76.yetpipe.data.VideoInfo;
+import io.github.luizgustavo76.yetpipe.http.HttpClient;
+import io.github.luizgustavo76.yetpipe.http.HttpRequest;
 
 /**
  * Created by Gleb on 11.01.2026.

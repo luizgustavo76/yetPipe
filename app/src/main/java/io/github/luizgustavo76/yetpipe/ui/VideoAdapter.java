@@ -1,4 +1,4 @@
-package io.github.gohoski.notpipe.ui;
+package io.github.luizgustavo76.yetpipe.ui;
 
 import android.app.Activity;
 import android.content.Context;
@@ -11,10 +11,10 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import io.github.gohoski.notpipe.R;
-import io.github.gohoski.notpipe.Utils;
-import io.github.gohoski.notpipe.data.VideoInfo;
-import io.github.gohoski.notpipe.util.ImageLoader;
+import io.github.luizgustavo76.yetpipe.R;
+import io.github.luizgustavo76.yetpipe.Utils;
+import io.github.luizgustavo76.yetpipe.data.VideoInfo;
+import io.github.luizgustavo76.yetpipe.util.ImageLoader;
 
 /**
  * Adapter for video lists with lazy loading support.

@@ -1,4 +1,4 @@
-package io.github.gohoski.notpipe.config;
+package io.github.luizgustavo76.yetpipe.config;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -6,8 +6,8 @@ import android.content.SharedPreferences;
 import java.util.ArrayList;
 import java.util.List;
 
-import io.github.gohoski.notpipe.NotPipe;
-import io.github.gohoski.notpipe.Utils;
+import io.github.luizgustavo76.yetpipe.YetPipe;
+import io.github.luizgustavo76.yetpipe.Utils;
 
 /**
  * Created by opencode on 15.02.2026.
@@ -124,7 +124,7 @@ public class ConfigManager {
         config.setUpdateFrequency(prefs.getInt(KEY_UPDATE_FREQUENCY, 1));
         config.setUseExternalPlayer(prefs.getBoolean(KEY_EXTERNAL_PLAYER, false));
         config.setLastUpdate(prefs.getLong(KEY_LAST_UPDATE, 0L));
-        config.setAsyncSetVideoUri(prefs.getBoolean(KEY_ASYNC_SET_VIDEO_URI, NotPipe.SDK >= 14 && NotPipe.SDK <= 18));
+        config.setAsyncSetVideoUri(prefs.getBoolean(KEY_ASYNC_SET_VIDEO_URI, YetPipe.SDK >= 14 && YetPipe.SDK <= 18));
         config.setFullscreenRotateLandscape(prefs.getBoolean(KEY_FULLSCREEN_ROTATE, true));
 
         if (prefs.contains(KEY_CONVERT_VIDEOS)) {
@@ -135,7 +135,7 @@ public class ConfigManager {
         } else { // First time setup
             boolean convert, stream, external = false;
             boolean notV7 = !Utils.isV7();
-            if (NotPipe.SDK < 5 || (NotPipe.SDK < 11 && notV7)) {
+            if (YetPipe.SDK < 5 || (YetPipe.SDK < 11 && notV7)) {
                 convert = true;
                 stream = false;
             } else {

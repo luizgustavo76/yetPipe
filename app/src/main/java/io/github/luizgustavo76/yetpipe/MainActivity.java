@@ -1,4 +1,4 @@
-package io.github.gohoski.notpipe;
+package io.github.luizgustavo76.yetpipe;
 
 import android.app.Activity;
 import android.content.Context;
@@ -32,15 +32,15 @@ import android.widget.Toast;
 import java.util.Calendar;
 import java.util.List;
 
-import io.github.gohoski.notpipe.api.Manager;
-import io.github.gohoski.notpipe.api.Metadata;
-import io.github.gohoski.notpipe.config.Config;
-import io.github.gohoski.notpipe.config.ConfigManager;
-import io.github.gohoski.notpipe.data.VideoInfo;
-import io.github.gohoski.notpipe.ui.AutoCompleteAdapter;
-import io.github.gohoski.notpipe.ui.VideoAdapter;
-import io.github.gohoski.notpipe.util.ImageLoader;
-import io.github.gohoski.notpipe.util.InstancesUpdater;
+import io.github.luizgustavo76.yetpipe.api.Manager;
+import io.github.luizgustavo76.yetpipe.api.Metadata;
+import io.github.luizgustavo76.yetpipe.config.Config;
+import io.github.luizgustavo76.yetpipe.config.ConfigManager;
+import io.github.luizgustavo76.yetpipe.data.VideoInfo;
+import io.github.luizgustavo76.yetpipe.ui.AutoCompleteAdapter;
+import io.github.luizgustavo76.yetpipe.ui.VideoAdapter;
+import io.github.luizgustavo76.yetpipe.util.ImageLoader;
+import io.github.luizgustavo76.yetpipe.util.InstancesUpdater;
 
 public class MainActivity extends Activity implements InstancesUpdater.OnInstancesUpdatedListener {
     private static final String STATE_SEARCH_QUERY = "search_query";

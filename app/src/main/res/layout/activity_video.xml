@@ -23,13 +23,13 @@
             android:layout_height="wrap_content"
             android:background="@android:color/black"
             android:gravity="center">
-            <io.github.gohoski.notpipe.ui.AspectRatioVideoView
+            <io.github.luizgustavo76.yetpipe.ui.AspectRatioVideoView
                 android:id="@+id/video"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_gravity="center"
                 android:scaleType="fitCenter"/>
-            <io.github.gohoski.notpipe.ui.AspectRatioImageView
+            <io.github.luizgustavo76.yetpipe.ui.AspectRatioImageView
                 android:id="@+id/thumbnail"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content" />
@@ -209,7 +209,7 @@
                                     android:text="@string/no_related"
                                     android:padding="16dp"
                                     android:visibility="gone"/>
-                                <io.github.gohoski.notpipe.ui.AdapterLinearLayout
+                                <io.github.luizgustavo76.yetpipe.ui.AdapterLinearLayout
                                     android:id="@+id/related_list"
                                     android:layout_width="fill_parent"
                                     android:layout_height="wrap_content"
@@ -235,7 +235,7 @@
                                     android:text="@string/no_comments"
                                     android:padding="16dp"
                                     android:visibility="gone"/>
-                                <io.github.gohoski.notpipe.ui.AdapterLinearLayout
+                                <io.github.luizgustavo76.yetpipe.ui.AdapterLinearLayout
                                     android:id="@+id/comments_list"
                                     android:layout_width="fill_parent"
                                     android:layout_height="wrap_content"

@@ -1,4 +1,4 @@
-package io.github.gohoski.notpipe.ui;
+package io.github.luizgustavo76.yetpipe.ui;
 
 import android.content.Context;
 import android.util.AttributeSet;

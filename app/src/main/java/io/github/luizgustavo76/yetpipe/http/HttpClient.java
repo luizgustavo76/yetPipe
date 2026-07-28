@@ -1,4 +1,4 @@
-package io.github.gohoski.notpipe.http;
+package io.github.luizgustavo76.yetpipe.http;
 
 import android.util.Log;
 
@@ -11,9 +11,9 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Map;
 
-import io.github.gohoski.notpipe.BuildConfig;
-import io.github.gohoski.notpipe.NotPipe;
-import io.github.gohoski.notpipe.Utils;
+import io.github.luizgustavo76.yetpipe.BuildConfig;
+import io.github.luizgustavo76.yetpipe.YetPipe;
+import io.github.luizgustavo76.yetpipe.Utils;
 
 /**
  * Created by Gleb on 21.08.2025.
@@ -47,7 +47,7 @@ public class HttpClient {
      */
     @SuppressWarnings("ConstantConditions")
     public static InputStream execute(HttpRequest request, int timeout) throws IOException {
-        Utils.waitForConnection(NotPipe.getAppContext());
+        Utils.waitForConnection(YetPipe.getAppContext());
         HttpURLConnection connection = null;
         try {
             URL url = new URL(request.getBaseUrl() + request.getEndpoint());
@@ -166,7 +166,7 @@ public class HttpClient {
      * @throws IOException If there's an error making the request
      */
     public static String getRedirectUrl(String baseUrl, String urlString, int timeout) throws IOException {
-        Utils.waitForConnection(NotPipe.getAppContext());
+        Utils.waitForConnection(YetPipe.getAppContext());
         HttpURLConnection connection = null;
         try {
             URL url = new URL(baseUrl+urlString);
