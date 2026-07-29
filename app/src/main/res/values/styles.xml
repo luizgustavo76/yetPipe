@@ -3,3 +3,8 @@
     <style name="AppTheme" parent="@android:style/Theme">
     </style>
 </resources>
+<resources>
+    <style name="DropdownSpinner" parent="Widget.AppCompat.Spinner">
+        <!-- Adicione customizações de estilo aqui se necessário -->
+    </style>
+</resources>

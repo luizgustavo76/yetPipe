@@ -5,3 +5,6 @@
     <color name="colorAccent">#D81B60</color>
     <color name="background">#000</color>
 </resources>
+<resources>
+    <color name="dropdown_bg">#FFFFFF</color>
+</resources>

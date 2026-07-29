@@ -114,3 +114,6 @@
     <string name="download_progress_percent">%1$d%% (%2$d KB/s)</string>
     <string name="download_progress_mb">%1$.1f MB (%2$d KB/s)</string>
 </resources>
+<resources>
+    <string name="no_videos_found">Nenhum vídeo encontrado</string>
+</resources>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/watchContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- 1. ÁREA DO PLAYER DE VÍDEO -->
+    <FrameLayout 
+        android:id="@+id/playerContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="#000000" />
+
+    <!-- 2. PAINEL DE ERRO / CARREGAMENTO (Fica 'gone' até ser acionado) -->
+    <LinearLayout 
+        android:id="@+id/layoutPlayerStatus"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:background="#0F0F0F"
+        android:visibility="gone">
+
+        <ProgressBar 
+            android:id="@+id/progressLoading"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center" />
+
+        <ImageView 
+            android:id="@+id/imgStatusIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp" />
+
+        <TextView 
+            android:id="@+id/txtStatusMessage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
+
+        <Button 
+            android:id="@+id/btnRetry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="12dp"
+            android:text="Tentar Novamente" />
+
+    </LinearLayout>
+
+    <!-- 3. DETALHES DO VÍDEO + VÍDEOS RELACIONADOS -->
+    <ListView 
+        android:id="@+id/listRelatedAndInfo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#0F0F0F"
+        android:cacheColorHint="#0F0F0F"
+        android:divider="@null"
+        android:dividerHeight="0dp" />
+
+</LinearLayout>

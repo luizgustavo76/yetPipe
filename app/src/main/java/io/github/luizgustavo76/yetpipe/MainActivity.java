@@ -85,9 +85,11 @@ public class MainActivity extends Activity implements InstancesUpdater.OnInstanc
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        // Substituído layout genérico pelo layout oficial da tela principal do YouTube
+        setContentView(R.layout.browse_activity);
 
-        listView = (AbsListView) findViewById(R.id.videos);
+        // Atualizado ID da lista principal para o ID do feed de vídeos
+        listView = (AbsListView) findViewById(R.id.listMainFeed);
         searchQuery = (AutoCompleteTextView) findViewById(R.id.search_query);
         final ImageButton searchBtn = (ImageButton) findViewById(R.id.search_btn);
         final ProgressBar loading = (ProgressBar) findViewById(R.id.loading);
@@ -244,11 +246,12 @@ public class MainActivity extends Activity implements InstancesUpdater.OnInstanc
             loading.setVisibility(View.GONE);
             noPopular.setVisibility(View.GONE);
 
+            // Mapeado para os layouts de item descompilados do YouTube
             int layout;
             if (listView instanceof GridView || isSearchMode) {
-                layout = R.layout.item_video;
+                layout = R.layout.the_feed_video_item;
             } else {
-                layout = R.layout.item_video_compact;
+                layout = R.layout.s2_video_item;
             }
 
             adapter = new VideoAdapter(this, layout, videos);
@@ -400,27 +403,19 @@ public class MainActivity extends Activity implements InstancesUpdater.OnInstanc
             layout.addView(imageView);
 
             final TextView text = new TextView(this);
-            text.setText(getString(R.string.about_) + "\n\nMIT License\n" +
+            text.setText(getString(R.string.about_) + "\n\nApache License 2.0\n" +
                     "\n" +
-                    "Copyright (c) 2021-2025 Arman Jussupgaliyev\n" +
+                    "Copyright (c) 2026 yetPipe Contributors\n" +
                     "\n" +
-                    "Permission is hereby granted, free of charge, to any person obtaining a copy\n" +
-                    "of this software and associated documentation files (the \"Software\"), to deal\n" +
-                    "in the Software without restriction, including without limitation the rights\n" +
-                    "to use, copy, modify, merge, publish, distribute, sublicense, and/or sell\n" +
-                    "copies of the Software, and to permit persons to whom the Software is\n" +
-                    "furnished to do so, subject to the following conditions:\n" +
+                    "Licensed under the Apache License, Version 2.0 (the \"License\");\n" +
+                    "you may not use this file except in compliance with the License.\n" +
+                    "You may obtain a copy of the License at\n" +
                     "\n" +
-                    "The above copyright notice and this permission notice shall be included in all\n" +
-                    "copies or substantial portions of the Software.\n" +
+                    "    http://www.apache.org/licenses/LICENSE-2.0\n" +
                     "\n" +
-                    "THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n" +
-                    "IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n" +
-                    "FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\n" +
-                    "AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n" +
-                    "LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\n" +
-                    "OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\n" +
-                    "SOFTWARE.");
+                    "Unless required by applicable law or agreed to in writing, software\n" +
+                    "distributed under the License is distributed on an \"Strategy\" BASIS,\n" +
+                    "WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.");
             layout.addView(text);
 
             ScrollView scrollView = new ScrollView(this);
@@ -462,7 +457,8 @@ public class MainActivity extends Activity implements InstancesUpdater.OnInstanc
                 if (emptyView != null) emptyView.setVisibility(View.GONE);
             } else if (result.videos != null) {
                 videos = result.videos;
-                adapter = new VideoAdapter(MainActivity.this, R.layout.item_video, videos);
+                // Atualizado para o layout de item oficial
+                adapter = new VideoAdapter(MainActivity.this, R.layout.the_feed_video_item, videos);
                 if (listView != null) {
                     setAdapterForView(listView, adapter);
                 }
@@ -527,7 +523,8 @@ public class MainActivity extends Activity implements InstancesUpdater.OnInstanc
             } else {
                 if (noPopularView != null) noPopularView.setVisibility(View.GONE);
                 videos = result.videos;
-                int layout = result.videos.get(0).channelThumbnail.length() > 0 ? R.layout.item_video : R.layout.item_video_compact;
+                // Mapeado para os layouts oficiais descompilados
+                int layout = result.videos.get(0).channelThumbnail.length() > 0 ? R.layout.the_feed_video_item : R.layout.s2_video_item;
                 adapter = new VideoAdapter(context, layout, videos);
                 if (listView != null) {
                     setAdapterForView(listView, adapter);

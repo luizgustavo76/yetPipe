@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/dropdown_bg"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/spinner_category"
+            style="@style/DropdownSpinner"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="0.5" />
+
+        <Spinner
+            android:id="@+id/spinner_sort"
+            style="@style/DropdownSpinner"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="0.5" />
+    </LinearLayout>
+
+    <com.google.android.youtube.core.ui.PagedListView
+        android:id="@+id/paged_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:statusView="@layout/list_status_item"
+        app:textWhenEmpty="@string/no_videos_found" />
+
+</LinearLayout>
